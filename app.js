@@ -1,3 +1,4 @@
+require('dotenv').config();
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -54,6 +55,12 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+const port =  process.env.PORT || 5000;
+
+app.listen(port,() => {
+  console.log(`listening to port ${port}`);
 });
 
 module.exports = app;
