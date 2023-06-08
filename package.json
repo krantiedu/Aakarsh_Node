@@ -2,8 +2,11 @@
   "name": "second-structure",
   "version": "0.0.0",
   "private": true,
+ "engines": {
+    "node": "14.x"
+  },
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node app.js"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.338.0",
