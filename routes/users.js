@@ -1,3 +1,4 @@
+require('dotenv').config();
 const mongoose = require("mongoose");
 const plm = require("passport-local-mongoose");
 // mongoose.connect("mongodb://127.0.0.1:27017/nextnode").then(function(){
@@ -5,7 +6,7 @@ const plm = require("passport-local-mongoose");
 // })
 
 
-mongoose.connect("mongodb+srv://aakarshsshu2:Anushri1437@cluster0.qsx7qvt.mongodb.net/education?retryWrites=true&w=majority").then(function(){
+mongoose.connect(process.env.MONGODB_KEY).then(function(){
   console.log("database successfully connected")
 })
 
